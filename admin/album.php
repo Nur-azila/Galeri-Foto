@@ -18,6 +18,11 @@ if ($_SESSION['status'] != 'login') {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <title>website galeri poto</title>
+  <style>
+    body {
+    background-image: url('../assets/img/bg3.jpg');
+    background-size: cover;}
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
