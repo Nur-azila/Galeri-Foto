@@ -20,6 +20,11 @@ if ($_SESSION['status'] != 'login') {
     <link rel="shortcut icon" type="image/jpg" href="../assets/Icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <title>Website Galeri Foto</title>
+    <style>
+    body {
+    background-image: url('../assets/img/bg3.jpg');
+    background-size: cover;}
+</style>
 </head>
 
 <body>
