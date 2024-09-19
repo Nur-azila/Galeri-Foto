@@ -19,6 +19,11 @@ if ($_SESSION['status'] != 'login') {
  <title>Website Gareri Foto</title>
  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    body {
+    background-image: url('../assets/img/bg3.jpg');
+    background-size: cover;}
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
