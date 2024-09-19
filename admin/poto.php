@@ -17,6 +17,11 @@ if ($_SESSION['status'] != 'login') {
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <link rel="shortcut icon" type="img/jpg" href="../assets/Icon.jpg">
   <title>Website Galeri Foto</title>
+  <style>
+    body {
+    background-image: url('../assets/img/bg3.jpg');
+    background-size: cover;}
+</style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
