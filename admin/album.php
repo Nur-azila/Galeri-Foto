@@ -16,18 +16,19 @@ if ($_SESSION['status'] != 'login') {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Galeri Foto</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
-  <title>website galeri poto</title>
   <style>
     body {
-    background-image: url('../assets/img/bg3.jpg');
-    background-size: cover;}
-</style>
+      background-image: url('../assets/img/bg3.jpg');
+      background-size: cover;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <a class="navbar-brand" href="index.php">website galeri poto</a>
+      <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,7 +36,7 @@ if ($_SESSION['status'] != 'login') {
         <div class="navbar-nav me-auto">
           <a href="home.php" class="nav-link">Home</a>
           <a href="album.php" class="nav-link">Album</a>
-          <a href="poto.php" class="nav-link">Foto</a>
+          <a href="foto.php" class="nav-link">Foto</a>
         </div>
 
         <a href="../config/aksi_logout.php" class="btn btn-outline-danger m-1">Keluar</a>
@@ -74,7 +75,7 @@ if ($_SESSION['status'] != 'login') {
                   <th>Aksi</th>
                 </tr>
               </thead>
-              <tbody>     
+              <tbody>
                 <?php 
                 $no = 1;
                 $userid = $_SESSION['userid'];
@@ -105,7 +106,7 @@ if ($_SESSION['status'] != 'login') {
                               <input type="text" name="namaalbum" value="<?php echo $data['namaalbum'] ?>" class="form-control" required>
                               <label class="form-label">Deskripsi</label>
                               <textarea class="form-control" name="deskripsi" required>
-                                <?php echo $data['deskripsi'] ?>
+                                <?php echo $data['deskripsi']; ?>
                               </textarea>
 
                             </div>
@@ -156,7 +157,7 @@ if ($_SESSION['status'] != 'login') {
 
 
 <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
-  <p>&copy; ukk azila </p>
+  <p>&copy; UKK RPL 2024 | nur azila</p>
 </footer>
 
 
