@@ -7,21 +7,20 @@ if ($_SESSION['status'] != 'login') {
   location.href='../index.php';
   </script>";
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
-  <link rel="shortcut icon" type="img/jpg" href="../assets/Icon.jpg">
   <title>Website Galeri Foto</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <style>
     body {
-    background-image: url('../assets/img/bg3.jpg');
-    background-size: cover;}
-</style>
+      background-image: url('../assets/img/bg3.jpg');
+      background-size: cover;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,9 +33,8 @@ if ($_SESSION['status'] != 'login') {
         <div class="navbar-nav me-auto">
           <a href="home.php" class="nav-link">Home</a>
           <a href="album.php" class="nav-link">Album</a>
-          <a href="poto.php" class="nav-link">Foto</a>
+          <a href="foto.php" class="nav-link">Foto</a>
         </div>
-
         <a href="../config/aksi_logout.php" class="btn btn-outline-danger m-1">Keluar</a>
       </div>
     </div>
@@ -54,14 +52,13 @@ if ($_SESSION['status'] != 'login') {
               <label class="form-label">Deskripsi</label>
               <textarea class="form-control" name="deskripsifoto" required></textarea>
               <label class="form-label">Album</label>
-              <select class="form-control" name="albumid"required>
+              <select class="form-control" name="albumid" required>
                 <?php 
                 $userid = $_SESSION['userid'];
                 $sql_album = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
                 while($data_album = mysqli_fetch_array($sql_album)) { ?>
                   <option value="<?php echo $data_album['albumid'] ?>"><?php echo $data_album['namaalbum'] ?></option>
-                <?php } 
-                ?>
+                <?php } ?>
               </select>
               <label class="form-label">File</label>
               <input type="file" class="form-control" name="lokasifile" required>
@@ -81,7 +78,7 @@ if ($_SESSION['status'] != 'login') {
                   <th>#</th>
                   <th>Foto</th>
                   <th>Judul Foto</th>
-                  <th>Deskirpsi</th>
+                  <th>Deskripsi</th>
                   <th>Tanggal</th>
                   <th>Aksi</th>
                 </tr>
@@ -91,8 +88,7 @@ if ($_SESSION['status'] != 'login') {
                 $no = 1;
                 $userid = $_SESSION['userid'];
                 $sql = mysqli_query($koneksi, "SELECT * FROM foto WHERE userid='$userid'");
-                while($data = mysqli_fetch_array($sql)){
-                 ?>
+                while($data = mysqli_fetch_array($sql)) { ?>
                  <tr>
                   <td><?php echo $no++ ?></td>
                   <td><img src="../assets/img/<?php echo $data['lokasifile'] ?>" width="100"></td>
@@ -125,8 +121,7 @@ if ($_SESSION['status'] != 'login') {
                                 $sql_album = mysqli_query($koneksi, "SELECT * FROM album WHERE userid='$userid'");
                                 while($data_album = mysqli_fetch_array($sql_album)) { ?>
                                   <option <?php if($data_album['albumid'] == $data['albumid']) { ?> selected="selected" <?php } ?> value="<?php echo $data_album['albumid'] ?>"><?php echo $data_album['namaalbum'] ?></option>
-                                <?php } 
-                                ?>
+                                <?php } ?>
                               </select>
                               <label class="form-label">Foto</label>
                               <div class="row">
@@ -138,8 +133,6 @@ if ($_SESSION['status'] != 'login') {
                                   <input type="file" class="form-control" name="lokasifile">
                                 </div>
                               </div>
-                              
-
                             </div>
                             <div class="modal-footer">
                               <button type="submit" name="edit" class="btn btn-primary">Edit Data</button>
@@ -164,7 +157,6 @@ if ($_SESSION['status'] != 'login') {
                             <form action="../config/aksi_foto.php" method="POST">
                               <input type="hidden" name="fotoid" value="<?php echo $data['fotoid'] ?>">
                               Apakah anda yakin akan menghapus data <strong> <?php echo $data['judulfoto'] ?> </strong> ?
-
                             </div>
                             <div class="modal-footer">
                               <button type="submit" name="hapus" class="btn btn-primary">Hapus Data</button>
@@ -184,12 +176,9 @@ if ($_SESSION['status'] != 'login') {
   </div>
 </div>
 
-
-
 <footer class="d-flex justify-content-center border-top mt-3 bg-light fixed-bottom">
-  <p>&copy;2024 Galeri Foto | Nur Azila</p>
+  <p>&copy; UKK RPL 2024 | nur azila</p>
 </footer>
-
 
 <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
 </body>
