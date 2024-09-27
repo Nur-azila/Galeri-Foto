@@ -18,7 +18,7 @@ $userid = isset($_SESSION['userid']) ? $_SESSION['userid'] : null;
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
-            background-image: url('assets/img/bunga.jpg');
+            background-image: url('assets/img/bg3.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
